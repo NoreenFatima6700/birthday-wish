@@ -1,0 +1,133 @@
+/* GENERAL RESET */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Courier New', Courier, monospace;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    /* Level 1 starts White */
+    background-color: #ffffff; 
+    transition: background-color 2s ease;
+}
+
+/* UTILITIES */
+.hidden { display: none !important; }
+.active { display: flex !important; }
+
+/* LEVEL 1: FAKE 404 */
+#level1 {
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #000;
+    text-align: center;
+}
+
+#level1 h1 { font-size: 5rem; letter-spacing: -2px; margin-bottom: 10px; }
+#level1 p { font-size: 1.2rem; }
+.server-text { color: #ccc; font-size: 0.8rem !important; margin-top: 50px;}
+
+/* The Invisible Clue */
+.hidden-clue {
+    color: white; /* Same as background */
+    user-select: text; /* Allow highlighting */
+    margin: 20px 0;
+    cursor: text;
+}
+.hidden-clue::selection {
+    background: black;
+    color: #00ff41;
+}
+
+.input-zone { margin-top: 30px; }
+input {
+    border: 1px solid #ccc;
+    padding: 10px;
+    font-family: inherit;
+    outline: none;
+}
+button {
+    border: 1px solid black;
+    background: black;
+    color: white;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-family: inherit;
+    transition: 0.3s;
+}
+button:hover { background: #333; }
+
+/* LEVEL 2: DARK TERMINAL */
+#level2 {
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #0d0d0d;
+    color: #00ff41; /* Hacker Green */
+    text-align: center;
+}
+.blink { animation: blinker 1s linear infinite; font-size: 2rem;}
+@keyframes blinker { 50% { opacity: 0; } }
+.hint-text { color: #555; font-size: 0.8rem; margin-top: 20px; }
+
+/* LEVEL 3: 3D WORLD */
+#level3 {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    background-color: #000; /* Deep Space */
+}
+
+/* The 3D Background */
+#canvas-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+/* The Message on top */
+.message-overlay {
+    position: absolute;
+    z-index: 10;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    pointer-events: none; /* Let clicks pass through to the 3D shape */
+}
+
+.message-overlay h1 {
+    color: #fff;
+    text-shadow: 0 0 10px #ff0055;
+    font-size: 3rem;
+    margin-bottom: 20px;
+    letter-spacing: 5px;
+}
+
+.glass-card {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(5px);
+    padding: 30px;
+    border-radius: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    max-width: 600px;
+    text-align: center;
+    color: #fff;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    box-shadow: 0 0 20px rgba(255, 0, 85, 0.3);
+}

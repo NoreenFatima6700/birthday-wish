@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>System Critical</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Load Three.js from CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+</head>
+<body>
+
+    <!-- AUDIO PLAYER (Hidden) -->
+    <!-- Note: We use a placeholder MP3. You should replace the 'src' with your own file or link -->
+    <audio id="bg-music" loop>
+        <source src="nasheed.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+
+    <!-- LEVEL 1: The Invisible Ink (Fake 404) -->  
+    <div id="level1" class="level active">
+        <div class="content-404">
+            <h1>404 ERROR</h1>
+            <p>Page not found.</p>
+            <p class="server-text">Server response time: 0.02ms</p>
+            
+            <!-- THE CLUE: White text on white background -->
+            <p class="hidden-clue">Password: YourLove</p> 
+            
+            <div class="input-zone">
+                <input type="text" id="pass1" placeholder="Override Protocol..." autocomplete="off">
+                <button onclick="checkLevel1()">EXECUTE</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- LEVEL 2: The Console (Hacker Terminal) -->
+    <div id="level2" class="level hidden">
+        <div class="terminal">
+            <h1>SYSTEM LOCKED</h1>
+            <p class="blink">_</p>
+            <p>Access denied. Graphical Interface corrupted.</p>
+            <p>Developer access only.</p>
+            <p class="hint-text">> Console</p>
+        </div>
+    </div>
+
+    <!-- LEVEL 3: The 3D Heart & Message -->
+    <div id="level3" class="level hidden">
+        <!-- The 3D Canvas sits behind the text -->
+        <div id="canvas-container"></div>
+        
+        <div class="message-overlay">
+            <h1>HAPPY BIRTHDAY</h1>
+            <div class="glass-card">
+                <p id="typed-message"></p>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
