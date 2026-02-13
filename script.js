@@ -1,6 +1,17 @@
 /* --- CONFIGURATION --- */
 // The message to type out in Level 3
-const FINAL_MESSAGE = "You made it. Just like solving this puzzle, knowing you has been a journey of discovery. You are my favorite mystery. Happy Birthday.";
+const FINAL_MESSAGE = `You solved it — like you solve everything — quietly, intelligently, without needing applause.
+
+Getting to know you has never been simple. It has been layers within layers, truths revealed slowly, a mind that refuses to be predictable. You are not easy to understand — and that is exactly what makes you unforgettable.
+
+You are the kind of mystery that doesn't confuse… it captivates. The kind that challenges, unsettles, and yet feels strangely like home.
+
+On your birthday, I don't just celebrate another year of your life. I celebrate the depth you carry, the strength you always show, the brilliance you can't hide, and the intensity that makes you who you are.
+
+You are not ordinary. You were never meant to be.
+
+Happy Birthday — to my favorite Grim Ripper, my greatest discovery, and the one who continues to intrigue me in ways I cannot explain, only feel.`;
+
 const PASSWORD_LEVEL_1 = "noreen";
 
 /* --- AUDIO HANDLING --- */
